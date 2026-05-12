@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+.my-header {
+  border-bottom: 2px solid black;
+  position: sticky;
+  top: 0;
+  background-color: rgba(209, 157, 147, 0.812);
+  max-height: 15vh;
+}
+
 .navbar {
   list-style: none;
 
@@ -13,6 +21,7 @@
     text-decoration: none;
     color: black;
     font-weight: 600;
+    padding: 2px 5px;
   }
   
 }
@@ -27,6 +36,28 @@
 }
 
 
+.homepage {
+  min-height: 85vh;
+  text-shadow: 0px 1px 1px;
+  background: conic-gradient(
+    #a2b2bc 0deg 20deg, 
+    #93a7b6 20deg 40deg, 
+    #7a96ad 40deg 60deg, 
+    #6986a3 60deg 80deg, 
+    #5c7998 80deg 100deg, 
+    #506c8e 100deg 120deg, 
+    #4a6586 120deg 180deg, /* Spicchio più largo a destra */
+    #596f92 180deg 200deg,
+    #5c6587 200deg 220deg,
+    #5d597d 220deg 240deg,
+    #5e4c73 240deg 260deg,
+    #c8bebe 260deg 280deg,
+    #cdc5c5 280deg 300deg,
+    #c1c5cd 300deg 320deg,
+    #b2bcc4 320deg 340deg,
+    #a8b6c0 340deg 360deg
+  );
+}
 
 
 .img-wrapper {

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function DefaultLayout() {
     return (
         <>
-            <header className="d-flex flex-column align-items-center">
+            <header className="d-flex flex-column align-items-center my-header">
                 <h1>FAKE</h1>
                 <ul className="navbar d-flex gap-3">
                     <li>
