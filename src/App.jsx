@@ -1,7 +1,18 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router';
+
+import NotFound from './pages/NotFound';
 
 function App() {
-  return <button className='btn btn-primary'>click</button>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='*' element={<NotFound/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
 
 export default App
