@@ -5,8 +5,13 @@ import DefaultLayout from './layouts/DefaultLayout';
 import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
 import NotFound from './pages/NotFound';
+import Products from './pages/Products';
+
+import useFetchProducts from './hooks/useFetchProducts';
 
 function App() {
+  const productList = useFetchProducts();
+
   return (
     <>
       <BrowserRouter>
@@ -14,6 +19,8 @@ function App() {
           <Route element={<DefaultLayout/>}>
             <Route index element={<Homepage/>}/>
             <Route path='about-us' element={<AboutUs/>}/>
+            <Route path='products' element={<Products productList={productList}/>}/>
+            
           </Route>
           <Route path='*' element={<NotFound/>}/>
         </Routes>

@@ -1,15 +1,11 @@
-import { Link } from "react-router";
+
+import Cards_wrapper from "../components/CardsWrapper";
 
 
 function Homepage(){
     return (
         <>
             <h1>Welcome</h1>
-            <ul>
-                <li>
-                    <Link to='/about-us'>About us</Link>
-                </li>
-            </ul>
         </>
     );
 }
