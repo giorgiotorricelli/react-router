@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
 import NotFound from './pages/NotFound';
 import Products from './pages/Products';
+import CardDetailsLayout from './layouts/CardDetailsLayout';
 
 import useFetchProducts from './hooks/useFetchProducts';
 
@@ -20,6 +21,7 @@ function App() {
             <Route index element={<Homepage/>}/>
             <Route path='about-us' element={<AboutUs/>}/>
             <Route path='products' element={<Products productList={productList}/>}/>
+            <Route path='/card/:id' element={<CardDetailsLayout productList={productList}/>}/>
             
           </Route>
           <Route path='*' element={<NotFound/>}/>

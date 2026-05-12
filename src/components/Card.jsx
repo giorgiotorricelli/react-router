@@ -14,7 +14,7 @@ function Card({ singleProduct }) {
     } = singleProduct;
 
     return (
-        <div className="single-card-wrapper col-4 d-flex flex-column align-items-center">
+        <div className="single-card-wrapper d-flex flex-column align-items-center h-100 w-100">
             <div className="img-wrapper text-center">
                 <img src={image} alt={title} className="product-img" />
             </div>
