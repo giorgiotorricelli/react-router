@@ -21,7 +21,7 @@ function App() {
             <Route index element={<Homepage/>}/>
             <Route path='about-us' element={<AboutUs/>}/>
             <Route path='products' element={<Products productList={productList}/>}/>
-            <Route path='/card/:id' element={<CardDetailsLayout productList={productList}/>}/>
+            <Route path='/card/:id' element={<CardDetailsLayout/>}/>
             
           </Route>
           <Route path='*' element={<NotFound/>}/>

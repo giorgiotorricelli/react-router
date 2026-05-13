@@ -1,13 +1,22 @@
 import { useParams } from "react-router";
+import useSingleProdFetch from "../hooks/useSingleProdFetch";
 
-function CardDetailsLayout({ productList }) {
+function CardDetailsLayout() {
     const { id } = useParams(); // Prende l'ID dall'URL
+    const { product: card, loading, error } = useSingleProdFetch(Number(id));
 
-    const card = productList.find((item) => {
-        return item.id === Number(id);
-    });
 
-    console.log("Risultato finale card:", card);
+    if (loading) {
+        return <div className="text-center mt-5">Caricamento in corso...</div>;
+    }
+
+    if (error) {
+        return <div className="text-center mt-5">ERRORE NEL CARICAMENTO <br />{error}</div>;
+    }
+
+    if (!card) {
+        return <div className="text-center mt-5">Prodotto non disponibile.</div>;
+    }
 
 
 
