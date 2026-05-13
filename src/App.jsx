@@ -12,6 +12,8 @@ import useFetchProducts from './hooks/useFetchProducts';
 
 function App() {
   const productList = useFetchProducts();
+  const numberOfProducts = productList.length + 1;
+  
 
   return (
     <>
@@ -21,7 +23,7 @@ function App() {
             <Route index element={<Homepage/>}/>
             <Route path='about-us' element={<AboutUs/>}/>
             <Route path='products' element={<Products productList={productList}/>}/>
-            <Route path='/card/:id' element={<CardDetailsLayout/>}/>
+            <Route path='/card/:id' element={<CardDetailsLayout numberOfProducts={numberOfProducts}/>}/>
             
           </Route>
           <Route path='*' element={<NotFound/>}/>
